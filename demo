@@ -1,0 +1,52 @@
+Lactase: Digest the Milky Way
+
+1: Attention and authenticity
+
+"Who has a vacation planned somewhere interesting later this year?"
+(if Mars, ask whether someone going somewhere terrestrial?)
+"And what day does your vacation start?"
+
+"thank you"
+
+In NYC, there aren't many opportunities to see the night sky. So, when you are
+out traveling the world, it's doubly important to get the best possible shot of
+the stars... for your InstaSnap feed, or whatever.
+
+2: What is the problem?
+
+I'd like to demo a way of bringing the wonderful OpenSpace technology to the
+masses and show a practical way of planning your in-real-life interactions with
+our world and the universe surrounding it.
+
+3: The big idea
+
+Users are currently familiar with looking down at a map of Earth. The big idea
+here is to connect the experience that people are already used to and get them a
+tool that helps make it easier to look up.
+
+4: Impact and your needs
+
+Hopefully we will inspire more people to travel to places where they can explore
+nature and think about the universe. Tools like OpenSpace provide us with access
+to the necessary data to make the universe more accessible. The only thing left
+to do is to polish it up. The only code used here was to make the demo slightly
+smoother.
+
+
+"As some of you know, even on the clearest night you won't have a chance to see the milky way. With OpenSpace it's simple to  Will I have a chance to see the milky way?"
+
+# When? Ask the audience
+# Where? 
+
++ Go to the location (iceland?)
+  - via google maps ? (kind of works)
++ Display on two nodes
+* Loop the view from sunset to sunrise
++ Go to the time (2018-11-27)
+* limit / expand the FOV on the MilkyWay
+* Will the moon be there
+
+# Screenshot:
+openspace.setPropertyValueSingle('RenderEngine.TakeScreenshot', nil);
+
+# 
