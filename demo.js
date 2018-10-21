@@ -51,7 +51,16 @@ connection.connect(() => {
 
 var delay = 500
 // pause and setup scene
+
 setTimeout(() => {connection.startTopic('luascript', {script: 'openspace.time.togglePause();'}); console.log('1') }, delay);
+var isodate = process.argv[2] // 2018-11-27
+var lat = process.argv[3] // 64.125614
+var lon = process.argv[4] // -21.914953
+setTimeout(() => {connection.startTopic('luascript', {script: 'openspace.time.setTime("' + isodate + '");'}); console.log('0') }, delay);
+setTimeout(() => {connection.startTopic('luascript', {script: 'openspace.globebrowsing.goToGeo(' + lat + ', ' + lon + ', 8000000);'}); console.log('0') }, delay);
+
+var delay += 3000
+setTimeout(() => {connection.startTopic('luascript', {script: "openspace.setPropertyValueSingle('Scene.MilkyWay.renderable.Opacity', 1.000000);"}); }, delay);
 setTimeout(() => {connection.startTopic('luascript', {script: "openspace.setPropertyValue('Scene.*Trail.renderable.Enabled', false);"}); }, delay);
 
 setTimeout(() => {connection.startTopic('luascript', {script: "openspace.setPropertyValueSingle('Scene.Earth.RenderableGlobe.Layers.NightLayers.Earth_at_Night_Temporal.Enabled', true);"}); console.log('2') }, delay);
@@ -60,13 +69,6 @@ setTimeout(() => {connection.startTopic('luascript', {script: "openspace.setProp
 setTimeout(() => {connection.startTopic('luascript', {script: "openspace.setPropertyValueSingle('Scene.Earth.RenderableGlobe.Layers.ColorLayers.ESRI_VIIRS_Combo.Enabled', false);"})});
 setTimeout(() => {connection.startTopic('luascript', {script: "openspace.setPropertyValueSingle('Scene.Earth.RenderableGlobe.Layers.ColorLayers.ESRI_World_Imagery.Enabled', true);"})});
 
-
-// TODO: Input variable from users
-var isodate = process.argv[2] // 2018-11-27
-var lat = process.argv[3] // 64.125614
-var lon = process.argv[4] // -21.914953
-setTimeout(() => {connection.startTopic('luascript', {script: 'openspace.time.setTime("' + isodate + '");'}); console.log('5') }, delay);
-setTimeout(() => {connection.startTopic('luascript', {script: 'openspace.globebrowsing.goToGeo(' + lat + ', ' + lon + ', 8000000);'}); console.log('6') }, delay);
 
 setTimeout(() => {connection.startTopic('luascript', {script: 'openspace.time.togglePause();'}); console.log('8') }, delay); // resume
 setTimeout(() => {connection.startTopic('luascript', {script: 'openspace.time.setDeltaTime(360);'}); console.log('9') }, delay);
