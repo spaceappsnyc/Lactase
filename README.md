@@ -11,3 +11,5 @@ openspace.globebrowsing.goToGeo(64.9841821, -18.1059013, 1000000)
 and what day?2018-11-27
 on your mark...
 ```
+
+Demo: https://youtu.be/mK0AT9vHsY4?t=6480
